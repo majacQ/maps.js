@@ -696,12 +696,17 @@
     });
 
     naver.maps.Event.addListener(map, 'rightclick', function(e) {
-        var coordHtml = 'Coord: '+ e.coord +'<br />Point: '+ e.point +'<br />Offset: '+ e.offset;
+        var coordHtml =
+            'Coord: '+ '(우 클릭 지점 좌표)' + '<br />' +
+            'Point: ' + e.point + '<br />' +
+            'Offset: ' + e.offset;
 
         menuLayer.show().css({
             left: e.offset.x,
             top: e.offset.y
         }).html(coordHtml);
+
+        console.log('e.coord: ' + e.coord.toString());
     });
 
 </script>

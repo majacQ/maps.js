@@ -660,9 +660,6 @@
                 <td><b>Pano ID</b></td><td id="id_cell">&nbsp;</td>
             </tr>
             <tr>
-                <td><b>Position</b></td><td id="position_cell">&nbsp;</td>
-            </tr>
-            <tr>
                 <td><b>Title</b></td><td id="title_cell">&nbsp;</td>
             </tr>
             <tr>
@@ -747,10 +744,10 @@ function initPanorama() {
 
     naver.maps.Event.addListener(pano, "pano_changed", function() {
         $("#id_cell").text(pano.getPanoId());
-        $("#position_cell").text(pano.getPosition());
         $("#title_cell").text(pano.getLocation().title);
         $("#address_cell").text(pano.getLocation().address);
         $("#photodate_cell").text(pano.getLocation().photodate);
+        console.log('Position: ' + pano.getPosition());
     });
 
     naver.maps.Event.addListener(pano, "pov_changed", function() {

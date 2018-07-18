@@ -664,8 +664,7 @@
     var contentEl = $('<div class="iw_inner" style="width:350px;position:absolute;top:0;right:0;z-index:1000;background-color:#fff;border:solid 1px #333;">'
         + '<h3>Map States</h3>'
         + '<p style="font-size:14px;">zoom : <em class="zoom">'+ map.getZoom() +'</em></p>'
-        + '<p style="font-size:14px;">center : <em class="center">'+ map.getCenter() +'</em></p>'
-        + '<p style="font-size:14px;">bounds : <em class="bounds">'+ map.getBounds() +'</em></p>'
+        + '<p style="font-size:14px;">centerPoint : <em class="center">'+ map.getCenterPoint() +'</em></p>'
         + '</div>');
 
     contentEl.appendTo(map.getElement());
@@ -675,8 +674,8 @@
     });
 
     naver.maps.Event.addListener(map, 'bounds_changed', function(bounds) {
-        contentEl.find('.center').text(map.getCenter());
-        contentEl.find('.bounds').text(bounds);
+        contentEl.find('.center').text(map.getCenterPoint());
+        console.log('map.getCenter(): ' + map.getCenter().toString() + ', bounds: ' + bounds.toString());
     });
 </script>
 

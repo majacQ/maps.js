@@ -50,7 +50,6 @@ function initGeocoder() {
 
         infoWindow.setContent([
             '<div style="padding:10px;width:300px;font-size:14px;line-height:20px;">',
-            '<strong>LatLng</strong> : '+ latlng +'<br />',
             '<strong>UTMK</strong> : '+ utmk +'<br />',
             '<strong>TM128</strong> : '+ tm128 +'<br />',
             '<strong>NAVER</strong> : '+ naverCoord +'<br />',
@@ -58,6 +57,7 @@ function initGeocoder() {
         ].join(''));
 
         infoWindow.open(map, latlng);
+        console.log('LatLng: ' + latlng.toString());
     });
 }
 
