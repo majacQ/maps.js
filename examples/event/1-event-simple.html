@@ -68,7 +68,7 @@
 
     naver.maps.Event.addListener(map, 'rightclick', function(e) {
         var coordHtml =
-            'Coord: '+ '(우 클릭 지점 좌표)' + '<br />' +
+            'Coord: '+ '(우 클릭 지점 위/경도 좌표)' + '<br />' +
             'Point: ' + e.point + '<br />' +
             'Offset: ' + e.offset;
 
@@ -77,7 +77,7 @@
             top: e.offset.y
         }).html(coordHtml);
 
-        console.log('e.coord: ' + e.coord.toString());
+        console.log('Coord: ' + e.coord.toString());
     });
 
 </script>

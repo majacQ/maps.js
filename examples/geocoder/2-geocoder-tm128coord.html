@@ -48,21 +48,23 @@ function initMap() {
     });
 
     infoWindow = new naver.maps.InfoWindow({
-        content: [
-            '<div style="padding:10px;width:300px;font-size:14px;line-height:20px;">',
-            '<strong>Coord</strong> : '+ map.getCenter() +'<br />',
-            '</div>'
-        ].join('')
+        content: getInfoWindowContent(map.getCenter())
     });
 
     function updateInfoWindow(coord) {
-        infoWindow.setContent([
-            '<div style="padding:10px;width:300px;font-size:14px;line-height:20px;">',
-            '<strong>Coord</strong> : '+ coord +'<br />',
-            '</div>'
-        ].join(''));
-
+        infoWindow.setContent(getInfoWindowContent(coord));
         infoWindow.open(map, coord);
+    }
+
+    function getInfoWindowContent(coord) {
+        console.log('Coord:', coord);
+        return [
+            '<div style="padding:10px;width:200px;font-size:14px;line-height:20px;text-align:center;">',
+            '<p>',
+            '<strong>Coord</strong> : '+ 'TM128 좌표' +'<br />',
+            '</p>',
+            '</div>'
+        ].join('');
     }
 
     updateInfoWindow(map.getCenter());

@@ -675,7 +675,7 @@
 
     naver.maps.Event.addListener(map, 'bounds_changed', function(bounds) {
         contentEl.find('.center').text(map.getCenterPoint());
-        console.log('map.getCenter(): ' + map.getCenter().toString() + ', bounds: ' + bounds.toString());
+        console.log('Center: ' + map.getCenter().toString() + ', Bounds: ' + bounds.toString());
     });
 </script>
 
