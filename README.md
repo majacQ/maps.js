@@ -43,7 +43,7 @@ NAVER 지도 API v3는 지도의 기능을 확장하는 서브모듈 시스템�
 ## 문서
 
 * [API 레퍼런스](https://navermaps.github.io/maps.js/docs/index.html)
-* [튜토리얼](https://navermaps.github.io/maps.js/docs/tutorial-0-Getting-Started.html)
+* [튜토리얼](https://navermaps.github.io/maps.js/docs/tutorial-2-Getting-Started.html)
 * [마이그레이션 가이드](https://navermaps.github.io/maps.js/docs/tutorial-Migrate-From-v2.html)
 
 ## 지원
