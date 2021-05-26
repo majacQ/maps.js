@@ -79,7 +79,7 @@
                         isTouch = TOUCH_EVENT_CHECK_REGEXP.test(eventType);
                     }
 
-                    console.log('[' + type + ']', event);
+                    console.log('[eventType[' + type + ']', event);
                     if (touches.length > 0) {
                         console.log('touches', touches);
                     }
@@ -87,7 +87,8 @@
                     var mantle = naver.maps.__export(),
                         isTouchStarted = mantle.DOMEvent.isTouchStarted(),
                         checkString = '[' +  type + ']' +
-                            ' [isTouchStarted: ' + isTouchStarted +
+                            ', [eventType: ' + eventType +
+                            ', isTouchStarted: ' + isTouchStarted +
                             ', touches.length: ' + touches.length +
                             ', draggable: ' + mapView.get('draggable') +
                             ', pinchZoom: ' + mapView.get('pinchZoom') +
