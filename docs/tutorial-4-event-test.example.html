@@ -646,7 +646,9 @@
 
 <div id="wrap" class="section">
     <h2>이벤트 테스트</h2>
-    <p>이벤트 테스트 페이지 입니다.</p>
+    <p>isTouchStarted true 이면 mousemove 시 onDrag 가 발생하지 않습니다.</p>
+    <p>draggable false 또는 pinching true 라면 onSwipe 가 발생하지 않습니다.</p>
+    <p>pinchZoom false 또는 tilting true 라면 pinch 가 발생하지 않습니다.</p>
     <div id="map" style="width:810px;height:200px;display:inline-block;"></div>
     <p id="check-event" style="display:block;width:810px;height:200px;border:1px solid #17CE5F;overflow:hidden;font-weight:bold;font-size:14px;color:#777;white-space:pre-wrap;"></p>
     <div>
@@ -708,16 +710,15 @@
                         isTouch = TOUCH_EVENT_CHECK_REGEXP.test(eventType);
                     }
 
-                    console.log('[eventType[' + type + ']', event);
+                    console.log('[eventType[' + eventType + ']', event);
                     if (touches.length > 0) {
                         console.log('touches', touches);
                     }
 
                     var mantle = naver.maps.__export(),
                         isTouchStarted = mantle.DOMEvent.isTouchStarted(),
-                        checkString = '[' +  type + ']' +
-                            ', [eventType: ' + eventType +
-                            ', isTouchStarted: ' + isTouchStarted +
+                        checkString = '[' +  eventType + ']' +
+                            ' [isTouchStarted: ' + isTouchStarted +
                             ', touches.length: ' + touches.length +
                             ', draggable: ' + mapView.get('draggable') +
                             ', pinchZoom: ' + mapView.get('pinchZoom') +
