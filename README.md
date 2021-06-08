@@ -33,8 +33,8 @@ NAVER 지도 API v3는 지도의 기능을 확장하는 서브모듈 시스템�
 
 ## 이용 방법
 
-* [내 애플리케이션 등록하기](https://navermaps.github.io/maps.js/docs/tutorial-Getting-Started-Register-Application.html) 튜토리얼을 참고하여 클라이언트 `id`를 발급 받습니다.
-* [시작하기](https://navermaps.github.io/maps.js/docs/tutorial-0-Getting-Started.html) 튜토리얼을 참고하여 간단한 지도를 만듭니다.
+* [내 애플리케이션 등록하기](https://navermaps.github.io/maps.js/docs/tutorial-1-Getting-Client-ID.html) 튜토리얼을 참고하여 클라이언트 `id`를 발급 받습니다.
+* [시작하기](https://navermaps.github.io/maps.js/docs/tutorial-2-Getting-Started.html) 튜토리얼을 참고하여 간단한 지도를 만듭니다.
 
 ## 예제
 
@@ -43,7 +43,7 @@ NAVER 지도 API v3는 지도의 기능을 확장하는 서브모듈 시스템�
 ## 문서
 
 * [API 레퍼런스](https://navermaps.github.io/maps.js/docs/index.html)
-* [튜토리얼](https://navermaps.github.io/maps.js/docs/tutorial-0-Getting-Started.html)
+* [튜토리얼](https://navermaps.github.io/maps.js/docs/tutorial-2-Getting-Started.html)
 * [마이그레이션 가이드](https://navermaps.github.io/maps.js/docs/tutorial-Migrate-From-v2.html)
 
 ## 지원

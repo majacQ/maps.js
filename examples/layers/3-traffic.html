@@ -8,7 +8,7 @@
     <script src="../../docs/js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="../../docs/js/examples-base.js"></script>
     <script type="text/javascript" src="../../docs/js/highlight.min.js"></script>
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=MK_1sBFRuO6XEvDi29iW&amp;submodules=panorama"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=orK7_YeBAdN64OJ8HUVz&amp;submodules=panorama"></script>
     <link rel="stylesheet" type="text/css" href="../../docs/css/examples-base.css" />
 </head>
 <body>
@@ -45,7 +45,7 @@ var map = new naver.maps.Map('map', {
 });
 
 var trafficLayer = new naver.maps.TrafficLayer({
-    interval: 2000 // 2초마다 새로고침
+    interval: 300000 // 5분마다 새로고침 (최소값 5분)
 });
 
 var btn = $('#traffic');
@@ -60,9 +60,6 @@ naver.maps.Event.addListener(map, 'trafficLayer_changed', function(trafficLayer)
         $("#autorefresh").parent().hide();
     }
 });
-
-trafficLayer.setMap(map);
-
 
 btn.on("click", function(e) {
     e.preventDefault();
@@ -83,6 +80,10 @@ $("#autorefresh").on("click", function(e) {
     } else {
         trafficLayer.endAutoRefresh();
     }
+});
+
+naver.maps.Event.once(map, 'init_stylemap', function() {
+    trafficLayer.setMap(map);
 });
 </script>
 
